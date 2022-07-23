@@ -52,7 +52,7 @@ export const Form = ({ planeData }) => {
               Performance Data
             </h1>
             <div className="flex items-center justify-between relative">
-              <label aria-label="oat">
+              <label htmlFor="oat">
                 {errors && errors.oat && (
                   <HiExclamation className="absolute -left-[8%] md:-left-[3%] lg:-left-[3%] top-1 text-red-700" />
                 )}{" "}
@@ -65,11 +65,12 @@ export const Form = ({ planeData }) => {
                   pattern: { value: /^(0|[1-9]d*)(.d+)?$/ },
                 })}
                 type="number"
+                aria-label="outside air temperature"
                 className="w-[27%] input"
               />
             </div>
             <div className="flex items-center justify-between relative">
-              <label aria-label="pressureAltitude">
+              <label htmlFor="pressureAltitude">
                 {errors && errors.pressureAltitude && (
                   <HiExclamation className="absolute -left-[8%] md:-left-[3%] lg:-left-[3%] top-1 text-red-700" />
                 )}{" "}
@@ -82,11 +83,12 @@ export const Form = ({ planeData }) => {
                   pattern: { value: /^(0|[1-9]d*)(.d+)?$/ },
                 })}
                 type="number"
+                aria-label="pressure altitude"
                 className="w-[27%] input"
               />
             </div>
             <div className="flex items-center justify-between relative">
-              <label aria-label="aircraftWeight">
+              <label htmlFor="aircraftWeight">
                 {errors && errors.aircraftWeight && (
                   <HiExclamation className="absolute -left-[8%] md:-left-[3%] lg:-left-[3%] top-1 text-red-700" />
                 )}{" "}
@@ -99,11 +101,12 @@ export const Form = ({ planeData }) => {
                   pattern: { value: /^(0|[1-9]d*)(.d+)?$/ },
                 })}
                 type="number"
+                aria-label="aircraft weight"
                 className="w-[27%] input"
               />
             </div>
             <div className="flex items-center justify-between relative">
-              <label aria-label="flapSetting">
+              <label htmlFor="flapSetting">
                 {errors && errors.flapSetting && (
                   <HiExclamation className="absolute -left-[8%] md:-left-[3%] lg:-left-[3%] top-1 text-red-700" />
                 )}{" "}
@@ -114,6 +117,7 @@ export const Form = ({ planeData }) => {
                   required: true,
                 })}
                 className="w-[27%] input"
+                aria-label="flap setting"
               >
                 <option value="true">LDG</option>
                 <option value="false">T/O</option>
@@ -126,7 +130,7 @@ export const Form = ({ planeData }) => {
               Modifiers
             </h1>
             <div className="flex items-center justify-between relative">
-              <label aria-label="windSpeed">
+              <label htmlFor="windSpeed">
                 {errors && errors.windSpeed && (
                   <HiExclamation className="absolute -left-[8%] md:-left-[3%] lg:-left-[3%] top-1 text-red-700" />
                 )}{" "}
@@ -139,11 +143,12 @@ export const Form = ({ planeData }) => {
                   pattern: { value: /^(0|[1-9]d*)(.d+)?$/ },
                 })}
                 type="number"
+                aria-label="wind speed"
                 className="w-[27%] input"
               />
             </div>
             <div className="flex items-center justify-between relative">
-              <label aria-label="windDirection">
+              <label htmlFor="windDirection">
                 {errors && errors.windDirection && (
                   <HiExclamation className="absolute -left-[8%] md:-left-[3%] lg:-left-[3%] top-1 text-red-700" />
                 )}{" "}
@@ -156,11 +161,12 @@ export const Form = ({ planeData }) => {
                   pattern: { value: /^(0|[1-9]d*)(.d+)?$/ },
                 })}
                 type="number"
+                aria-label="wind direction"
                 className="w-[27%] input"
               />
             </div>
             <div className="flex items-center justify-between relative">
-              <label aria-label="runwayOfIntendedUse">
+              <label htmlFor="runwayOfIntendedUse">
                 {errors && errors.runwayOfIntendedUse && (
                   <HiExclamation className="absolute -left-[8%] md:-left-[3%] lg:-left-[3%] top-1 text-red-700" />
                 )}{" "}
@@ -173,42 +179,46 @@ export const Form = ({ planeData }) => {
                   pattern: { value: /^(0|[1-9]d*)(.d+)?$/ },
                 })}
                 type="number"
+                aria-label="runway of intended use"
                 className="w-[27%] input"
               />
             </div>
             <div className="flex items-center justify-between opacity-50">
-              <label aria-label="softRunway">Is the runway soft?</label>
+              <label htmlFor="softRunway">Is the runway soft?</label>
               <input
                 {...register("softRunway")}
                 defaultValue={false}
                 type="checkbox"
                 className=""
+                aria-label="soft runway"
                 disabled={true}
               />
             </div>
             <div className="flex items-center justify-between opacity-50">
-              <label aria-label="wetRunway">Is the runway wet?</label>
+              <label htmlFor="wetRunway">Is the runway wet?</label>
               <input
                 {...register("wetRunway")}
                 defaultValue={false}
                 type="checkbox"
                 className=""
+                aria-label="wet runway"
                 disabled={true}
               />
             </div>
             <div className="flex items-center justify-between opacity-50">
-              <label aria-label="grassyRunway">Is the runway grassy?</label>
+              <label htmlFor="grassyRunway">Is the runway grassy?</label>
               <input
                 {...register("grassyRunway")}
                 defaultValue={false}
                 type="checkbox"
                 className=""
+                aria-label="grassy runway"
                 disabled={true}
               />
             </div>
             {watch("grassyRunway") && (
               <div className="flex items-center justify-between opacity-50">
-                <label aria-label="grassLength">How long is the grass?</label>
+                <label htmlFor="grassLength">How long is the grass?</label>
                 <input
                   {...register("grassLength", {
                     valueAsNumber: true,
@@ -216,12 +226,13 @@ export const Form = ({ planeData }) => {
                   })}
                   type="number"
                   className="w-[27%] input"
+                  aria-label="grass length"
                   disabled={true}
                 />
               </div>
             )}
             {/* <div className="flex items-center justify-between">
-            <label aria-label="uphillSlope">What is the uphill slope?</label>
+            <label htmlFor="uphillSlope">What is the uphill slope?</label>
             <input
               {...register("uphillSlope", {
                 valueAsNumber: true,
@@ -232,9 +243,7 @@ export const Form = ({ planeData }) => {
             />
           </div> */}
             <div className="flex items-center justify-between opacity-50">
-              <label aria-label="downhillSlope">
-                What is the downhill slope?
-              </label>
+              <label htmlFor="downhillSlope">What is the downhill slope?</label>
               <input
                 {...register("downhillSlope", {
                   valueAsNumber: true,
@@ -242,6 +251,7 @@ export const Form = ({ planeData }) => {
                 })}
                 type="number"
                 className="w-[27%] input"
+                aria-label="downhill slope"
                 disabled={true}
               />
             </div>
@@ -257,6 +267,7 @@ export const Form = ({ planeData }) => {
           <button
             className="rounded-full w-[4rem] h-[4rem] flex justify-center items-center absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4"
             onClick={() => onSubmit}
+            type="submit"
           >
             <CgMathEqual className="w-fit text-center text-[2rem]" />
           </button>
