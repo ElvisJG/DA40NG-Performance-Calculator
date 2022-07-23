@@ -268,6 +268,7 @@ export const Form = ({ planeData }) => {
             className="rounded-full w-[4rem] h-[4rem] flex justify-center items-center absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4"
             onClick={() => onSubmit}
             type="submit"
+            aria-aria-describedby="submit form and calculate performance"
           >
             <CgMathEqual className="w-fit text-center text-[2rem]" />
           </button>
