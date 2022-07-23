@@ -1,3 +1,3 @@
-#Performance calculator for the very cool DA40NG airplane
+# Performance calculator for the very cool DA40NG airplane
 
-##V1. Modifiers are a work in progress
+## V1. Modifiers are a work in progress
