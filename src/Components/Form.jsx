@@ -127,35 +127,38 @@ export const Form = ({ planeData }) => {
                 className="w-[27%] input"
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between opacity-50">
               <label aria-label="softRunway">Is the runway soft?</label>
               <input
                 {...register("softRunway")}
                 defaultValue={false}
                 type="checkbox"
                 className=""
+                disabled={true}
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between opacity-50">
               <label aria-label="wetRunway">Is the runway wet?</label>
               <input
                 {...register("wetRunway")}
                 defaultValue={false}
                 type="checkbox"
                 className=""
+                disabled={true}
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between opacity-50">
               <label aria-label="grassyRunway">Is the runway grassy?</label>
               <input
                 {...register("grassyRunway")}
                 defaultValue={false}
                 type="checkbox"
                 className=""
+                disabled={true}
               />
             </div>
             {watch("grassyRunway") && (
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between opacity-50">
                 <label aria-label="grassLength">How long is the grass?</label>
                 <input
                   {...register("grassLength", {
@@ -164,6 +167,7 @@ export const Form = ({ planeData }) => {
                   })}
                   type="number"
                   className="w-[27%] input"
+                disabled={true}
                 />
               </div>
             )}
@@ -178,7 +182,7 @@ export const Form = ({ planeData }) => {
               className="w-[27%] text-center input"
             />
           </div> */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between opacity-50">
               <label aria-label="downhillSlope">
                 What is the downhill slope?
               </label>
@@ -189,6 +193,7 @@ export const Form = ({ planeData }) => {
                 })}
                 type="number"
                 className="w-[27%] input"
+                disabled={true}
               />
             </div>
           </div>
