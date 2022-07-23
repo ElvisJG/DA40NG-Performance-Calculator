@@ -17,7 +17,7 @@ const performanceCalculation = (
   const windMod = (rwis, w, v) => {
     const dtr = (deg) => deg * (Math.PI / 180);
     const angle = rwis - w;
-    const headwind = Math.abs(parseFloat(Math.cos(dtr(angle)).toFixed(10))) * v;
+    const headwind = Math.abs(parseFloat(Math.cos(dtr(angle)).toFixed(10))) * v || 0;
     const crosswind =
       Math.abs(parseFloat(Math.sin(dtr(angle)).toFixed(10))) * v;
     return { windMod: (headwind / 20) * 0.1, crosswind: crosswind };
